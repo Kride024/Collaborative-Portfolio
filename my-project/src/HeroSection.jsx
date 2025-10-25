@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 
 export default function HeroSection({
-  avatarSrc = "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop",
+  avatarSrc = "/Img_kriti.jpg",
   resumeHref = "https://drive.google.com/file/d/1ZzkrGm0hOHFQpHWDG1O_-MromqKPIMfc/view?usp=sharing",
    onSeeWork = () => {
     const experienceSection = document.getElementById('experience');
@@ -103,7 +103,7 @@ export default function HeroSection({
             <div className="absolute -inset-2 rounded-full bg-gradient-to-tr from-purple-500/50 to-indigo-400/50 blur-2xl" />
             <img
               src={avatarSrc}
-              alt="Deekshitha Busireddy headshot"
+              alt="Kriti headshot"
               // Dark border color of the avatar
               className="relative aspect-square h-64 w-64 rounded-full border-8 border-gray-900 object-cover shadow-2xl sm:h-72 sm:w-72 lg:h-[22rem] lg:w-[22rem]"
             />
