@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           {/* 1️⃣ Left: About / Socials */}
           <div>
-            <h3 className="text-2xl font-semibold text-white">Deekshitha</h3>
+            <h3 className="text-2xl font-semibold text-white">Kriti</h3>
             <p className="mt-3 text-sm leading-6 text-slate-400 max-w-sm">
               Passionate about crafting delightful digital experiences — merging
               creativity, clean design, and engineering precision.
@@ -29,28 +29,28 @@ export default function Footer() {
             {/* Social icons */}
             <div className="mt-5 flex items-center gap-3">
               <a
-                href="mailto:youremail@example.com"
+                href="mailto:ky740837@gmail.com"
                 aria-label="Email"
                 className="rounded-lg border border-slate-700 bg-slate-800 p-2 text-slate-200 transition hover:bg-slate-700 hover:text-white"
               >
                 <Mail className="h-4 w-4" />
               </a>
               <a
-                href="https://github.com/yourhandle"
+                href="https://github.com/Kride024"
                 aria-label="GitHub"
                 className="rounded-lg border border-slate-700 bg-slate-800 p-2 text-slate-200 transition hover:bg-slate-700 hover:text-white"
               >
                 <Github className="h-4 w-4" />
               </a>
               <a
-                href="https://linkedin.com/in/yourhandle"
+                href="https://www.linkedin.com/in/kriti-yadav3/"
                 aria-label="LinkedIn"
                 className="rounded-lg border border-slate-700 bg-slate-800 p-2 text-slate-200 transition hover:bg-slate-700 hover:text-white"
               >
                 <Linkedin className="h-4 w-4" />
               </a>
               <a
-                href="https://youtube.com/@yourchannel"
+                href="https://www.youtube.com/@Vedo-e5b"
                 aria-label="YouTube"
                 className="rounded-lg border border-slate-700 bg-slate-800 p-2 text-slate-200 transition hover:bg-red-600 hover:text-white"
               >
@@ -94,8 +94,8 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-800 pt-6  text-xs text-slate-500 sm:flex-row">
           <p className="flex items-center gap-1">
-            © {year} Deekshitha — Crafted with
-            <Heart className="h-3.5 w-3.5 text-rose-500" /> & Tailwind.
+            © {year} Kriti — Crafted with
+            <Heart className="h-3.5 w-3.5 text-rose-500" />
           </p>
           <button
             onClick={() =>

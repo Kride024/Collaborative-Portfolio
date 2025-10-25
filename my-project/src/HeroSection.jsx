@@ -3,15 +3,19 @@ import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 
 export default function HeroSection({
   avatarSrc = "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop",
-  resumeHref = "#",
-  onSeeWork = () => {},
+  resumeHref = "https://drive.google.com/file/d/1ZzkrGm0hOHFQpHWDG1O_-MromqKPIMfc/view?usp=sharing",
+   onSeeWork = () => {
+    const experienceSection = document.getElementById('experience');
+    experienceSection?.scrollIntoView({ behavior: 'smooth' });
+  },
   // FIX: Corrected object key syntax: "linkedin": "#" instead of "linkedin": "#"
-  links = { github: "#", linkedin: "#", email: "#" }, 
+  links = { github: "https://github.com/Kride024", linkedin: "https://www.linkedin.com/in/kriti-yadav3/", email: "mailto:ky740837@gmail.com" }, 
 }) {
   return (
     <section 
       // Background: Solid bg-slate-950 as requested
       className="relative overflow-hidden bg-slate-950"
+      id="home"
     >
       {/* Decorative elements were removed for the solid black background */}
 
@@ -46,13 +50,12 @@ export default function HeroSection({
 
           {/* Text color is light gray */}
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Software Engineer building and optimizing high‑impact applications. My experience includes
+            Full-Stack Software Engineer specializing in high-impact applications. Experienced in building scalable solutions at 
             {/* Highlighted text within paragraph */}
-            <strong className="mx-1 font-semibold text-indigo-300 underline decoration-indigo-500/60 underline-offset-4">Amazon</strong>
-            and delivering features for
+            <strong className="mx-1 font-semibold text-indigo-300 underline decoration-indigo-500/60 underline-offset-4">QTIMINDS</strong>
+            and optimizing enterprise Successfully delivered full-stack features that drove operational  efficiency by 40%, with proven technical excellence.
             {/* Highlighted text within paragraph */}
-            <strong className="mx-1 font-semibold text-indigo-300 underline decoration-blue-400/60 underline-offset-4">Microsoft</strong>
-            platforms, serving 400,000+ users.
+            
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">

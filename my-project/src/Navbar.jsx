@@ -87,7 +87,7 @@ const Navbar = () => {
         >
           {/* Logo (DB) — moved left tight */}
           <div className={`text-3xl font-semibold tracking-tight ${isBlackBg ? "text-white" : "text-gray-800"}`}>
-            DB
+            KR
           </div>
 
           {/* DESKTOP NAV */}
@@ -106,7 +106,7 @@ const Navbar = () => {
             }`}
             onClick={() => {
               // Replace with your resume URL if you want an actual download/open
-              const url = "https://drive.google.com/file/d/1_vzCEwoaNpnLCTS1n8xJfPUKrcp5cN-s/view?usp=sharing";
+              const url = "https://drive.google.com/file/d/1ZzkrGm0hOHFQpHWDG1O_-MromqKPIMfc/view?usp=sharing";
               window.open(url, "_blank", "noopener,noreferrer");
             }}
           >

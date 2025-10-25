@@ -27,48 +27,48 @@ const CodeIcon = (props) => (
 const projectsData = [
   // Row 1
   {
-    title: 'CodeDocs CLI',
-    description: 'An interactive dev environment for documenting code. Includes an in-browser transpiler and bundler.',
+    title: 'Elicit Engineers and  Interiors Website',
+    description: 'Spearheaded the full-cycle development and independent launch of the core company website.',
     image: 'code-docs', 
-    tags: ['React', 'Redux', 'Node.js', 'TypeScript', 'CLI'],
-    githubLink: '#',
+    tags: ['React.js', 'JavaScript', 'Google App Script', 'Local Storage', 'SEO', 'GitHub'],
+    githubLink: 'https://www.elicit.co.in/',
   },
   {
-    title: 'EiNK',
-    description: 'A cross-platform ebook manager and reader with web  frontends and a .NET backend.',
+    title: 'Vritra: Real-Time Health & Consultation Platform',
+    description: 'Implemented WebRTC for video consultations and integrated  AI service for user health tracking.',
     image: 'eink', 
-    tags: ['React', 'Swift', '.NET', 'PostgreSQL', 'iOS'],
-    githubLink: '#',
+    tags: ['Node.js', 'MongoDB', 'Python (AI)', 'WebRTC', 'Docker', 'RESTful APIs', 'CI/CD'],
+    githubLink: 'https://jayawd456.github.io/Solution-Challenge-2025-Vritra-/',
   },
   {
-    title: 'PicAi',
-    description: 'iOS app using on device deep learning for real time filter recommendations, with Metal rendering.',
+    title: 'Retail-Supply-Chains: Full-Stack Logistics Platform',
+    description: 'End-to-End logistics platform (Customer-Shipper bridge) best route calculation, delivery management.',
     image: 'picai', 
-    tags: ['Swift', 'Core ML', 'Deep Learning', 'Metal'],
-    githubLink: '#',
+    tags: ['React', 'SQL', 'Firebase', 'Google Maps API', 'RESTful APIs', 'Material Design'],
+    githubLink: 'https://jayawd456.github.io/Trasforming-Retail-Supply-Chains/',
   },
-  // Row 2
-  {
-    title: 'Exchange Platform',
-    description: 'A full-stack exchange application built with a modern monorepo architecture.',
-    image: 'transfer', 
-    tags: ['Next.js', 'Turborepo', 'Postgres', 'Prisma ORM'],
-    githubLink: '#',
-  },
-  {
-    title: 'Online Chess',
-    description: 'Play real time online chess matches with friends using Web Sockets for live communication.',
-    image: 'chess', 
-    tags: ['React', 'Node.js', 'Web Sockets', 'CSS'],
-    githubLink: '#',
-  },
-  {
-    title: 'AnonyMail',
-    description: 'A native macOS app using SwiftUI to process and anonymize mail data within CSV files via regex.',
-    image: 'anon-mail', 
-    tags: ['SwiftUI', 'macOS', 'Regex', 'CSV'],
-    githubLink: '#',
-  },
+//   // Row 2
+//   {
+//     title: 'Exchange Platform',
+//     description: 'A full-stack exchange application built with a modern monorepo architecture.',
+//     image: 'transfer', 
+//     tags: ['Next.js', 'Turborepo', 'Postgres', 'Prisma ORM'],
+//     githubLink: '#',
+//   },
+//   {
+//     title: 'Online Chess',
+//     description: 'Play real time online chess matches with friends using Web Sockets for live communication.',
+//     image: 'chess', 
+//     tags: ['React', 'Node.js', 'Web Sockets', 'CSS'],
+//     githubLink: '#',
+//   },
+//   {
+//     title: 'AnonyMail',
+//     description: 'A native macOS app using SwiftUI to process and anonymize mail data within CSV files via regex.',
+//     image: 'anon-mail', 
+//     tags: ['SwiftUI', 'macOS', 'Regex', 'CSV'],
+//     githubLink: '#',
+//   },
 ];
 
 // --- Project Card Component ---
@@ -158,7 +158,7 @@ const ProjectCard = ({ project, index }) => {
             
             {/* Content Section */}
             <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">{project.title}</h3>
                 <p className="text-sm text-gray-600 mb-4 h-12 overflow-hidden">{project.description}</p>
                 
                 {/* Tags */}

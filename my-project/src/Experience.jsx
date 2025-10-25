@@ -20,16 +20,16 @@ const experienceData = [
 },
   {
   icon: "cpu",
-  title: "Intern – IoT with Machine Learning",
-  company: "Pantech E-Learning",
-  date: "May 2023 – Jul 2023",
+  title: "Frontend Developer Intern",
+  company: "Elicit Interiors & Engineers",
+  date: "May 2025 – Jul 2025",
   details: [
-    "Completed hands-on internship focused on integrating Internet of Things (IoT) devices with Machine Learning models for predictive analytics and automation.",
-    "Learned and applied key regression algorithms to analyze sensor data and predict environmental parameters such as temperature and humidity.",
-    "Implemented Python-based ML models to process IoT datasets and visualize real-time outputs using cloud dashboards.",
-    "Gained experience in end-to-end IoT data pipelines — from sensor data collection to ML-based insights generation.",
+    "Engineered a specialized cost estimation tool that leveraged Local Storage to persist and compute user inputs, providing immediate, accurate estimates and improving qualified lead submissions by 25%.",
+    "Automated client data acquisition and storage by integrating Google Sheets via Apps Script, eliminating manual data entry and establishing a single source of truth for all customer records.",
+    "Spearheaded the full-cycle development and independent launch of the company's core website, initial design to final deploy.",
+    "Enhanced user engagement and client conversion by implementing a consultation booking system and essential SEO strategies, resulting in measurable improvements in organic visibility.",
   ],
-  tags: ["IoT", "Machine Learning", "Regression Models", "Python", "Data Analysis"],
+  tags: ["JavaScript", "React.js", "GitHub", "Google Analytics", "App Script"],
 }
 ];
 

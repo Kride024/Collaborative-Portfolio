@@ -71,18 +71,18 @@ export default function AchievementsSection() {
           <div className="space-y-6 text-slate-300">
             <Row
               icon={Medal}
-              title="1st Place, Amazon CSO Hackathon 2025"
-              subtitle="Secured top prize in a competitive, organization-wide hackathon."
+              title="Selected for GDSC 2025 Solution Challenge"
+              subtitle="Attended Prestigious Lucknow Bootcamp (Top Regional Qualifier)."
             />
             <Row
               icon={Medal}
-              title="22nd, TCS Microsoft GenAI Hackathon"
-              subtitle="Achieved a high rank among thousands in a major AI competition."
+              title="Top 400, Build with India Hackathon 2025 "
+              subtitle="Showcasing superior problem-solving skills and rapid prototyping ability."
             />
             <Row
               icon={Medal}
-              title="Silver Medalist, INEX-GYSC 2021"
-              subtitle="Recognized for outstanding project work in a global science challenge."
+              title="Technical Pipeline Architect & DSA/CP Program Lead "
+              subtitle="Personally instructing and preparing 400+ junior engineers for competitive technical interviews."
             />
           </div>
         </Card>
@@ -93,18 +93,23 @@ export default function AchievementsSection() {
           <div className="space-y-6 text-slate-300">
             <Row
               icon={BadgeCheck}
-              title="AZ-900: Azure Fundamentals"
-              subtitle="Microsoft"
+              title="GDSC'25 Solution Challenge "
+              subtitle="Google"
             />
             <Row
               icon={BadgeCheck}
-              title="Machine Learning"
-              subtitle="Coursera (Stanford)"
+              title="GraphTheory Programming Camp"
+              subtitle="AlgoUniversity"
             />
             <Row
               icon={BadgeCheck}
-              title="The Web Developer Bootcamp"
-              subtitle="Udemy"
+              title="Loreal sustainability challenge "
+              subtitle="L'Oréal"
+            />
+             <Row
+              icon={BadgeCheck}
+              title="Frontend Battle 2.0"
+              subtitle="Web and Design Society - IIT Bhubaneswar"
             />
           </div>
         </Card>
@@ -115,23 +120,23 @@ export default function AchievementsSection() {
           <div className="space-y-6 text-slate-300">
             <Row
               icon={Globe}
-              title="Web & Development"
-              subtitle="HTML, CSS, JS, TS"
+              title="Frontend & UI Engineering"
+              subtitle="React.js, JavaScript, Tailwind CSS, Figma, Material Design"
             />
             <Row
               icon={Atom}
-              title="React Ecosystem"
-              subtitle="React, Next.js, Redux"
+              title="Backend & Core Logic"
+              subtitle="Node.js, Express.js, Python, C/C++, RESTful API Design, WebSockets"
             />
             <Row
               icon={Server}
-              title="Backend"
-              subtitle="Node.js, Express, .NET"
+              title="Data Management & Persistence"
+              subtitle="MySQL, MongoDB, Redis (Caching), Amazon S3"
             />
             <Row
               icon={Smartphone}
-              title="iOS Development"
-              subtitle="Swift, SwiftUI, UIKit"
+              title="DevOps & Specialized Tech"
+              subtitle="GitHub Actions (CI/CD), Docker, WebRTC, Git/GitHub, Gradle"
             />
           </div>
         </Card>

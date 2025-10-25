@@ -151,28 +151,28 @@ export default function App() {
                 className="text-lg font-medium hover:underline decoration-slate-300 underline-offset-4"
                 href="mailto:busireddydeekshithareddy@gmail.com"
               >
-                busireddydeekshithareddy@gmail.com
+                ky740837@gmail.com
               </a>
             </div>
 
             <div className="mt-8 flex items-center gap-5 text-slate-500">
               <a
                 aria-label="GitHub"
-                href=""
+                href="https://github.com/Kride024"
                 className="rounded-lg p-2 hover:bg-slate-100"
               >
                 <Github className="h-5 w-5" />
               </a>
               <a
                 aria-label="LinkedIn"
-                href="https://linkedin.com/in/yourhandle"
+                href="https://www.linkedin.com/in/kriti-yadav3/"
                 className="rounded-lg p-2 hover:bg-slate-100"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
                 aria-label="Twitter / X"
-                href="https://twitter.com/yourhandle"
+                href="https://x.com/I_am_Kriti_A"
                 className="rounded-lg p-2 hover:bg-slate-100"
               >
                 <Twitter className="h-5 w-5" />
