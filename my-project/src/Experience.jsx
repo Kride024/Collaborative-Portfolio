@@ -1,46 +1,36 @@
-// src/Experience.jsx
 import React from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 /* -------------------- DATA -------------------- */
 const experienceData = [
   {
-    icon: "briefcase",
-    title: "System Development Engineer",
-    company: "Amazon",
-    date: "Feb 2025 - Present",
-    details: [
-      "Engineered an automation script to remove deprecated major versions from service version sets, reducing dependency-related risks and cutting the associated operational backlog by 10%.",
-      "Orchestrated a large-scale migration of critical backend services from JDK 8 to JDK 17, achieving up to a 15% increase in application throughput.",
-      "Developed key features for an internal operations portal using AWS Lambda, SNS, and DynamoDB to provide real-time visibility into the team's operational backlog.",
-      "Resolved critical blockers in CI/CD workflows to achieve full continuous deployment, accelerating the team's release-to-production cycle.",
-    ],
-    tags: ["AWS", "Java (JDK 17)", "CI/CD", "React", "Terraform", "DynamoDB"],
-  },
+  icon: "layers",
+  title: "Full-Stack Developer",
+  company: "QTIMinds",
+  date: "Aug 2025 – Present",
+  details: [
+    "Designed and implemented responsive dashboards and role-based interfaces (Owner, Manager, Guest, Admin, Staff) using React and TailwindCSS, ensuring seamless user experience across all devices.",
+    "Built and integrated multiple frontend modules including Occupancy Overview, Maintenance Tracking, and Payment Insights, improving usability and reducing manual tracking time by 40%.",
+    "Developed secure REST APIs and backend logic in Node.js and Express, handling authentication, role management, and data synchronization between services.",
+    "Implemented MySQL for structured relational data, Redis for caching high-traffic requests, and integrated Amazon S3 for file storage and media management.",
+    "Integrated Razorpay for real-time payments and automated invoice generation, enhancing financial transparency for property owners and managers.",
+    "Collaborated with a small cross-functional team to optimize deployment pipelines, reducing build times and improving system stability across updates.",
+  ],
+  tags: ["React", "TailwindCSS", "Node.js", "Express", "MySQL", "Redis", "AWS S3", "Razorpay", "REST APIs"],
+},
   {
-    icon: "fileText", // also supports "file-text"
-    title: "Systems Engineer",
-    company: "TATA Consultancy Services",
-    date: "June 2023 - Feb 2025",
-    details: [
-      "Engineered a performance overhaul of a critical Microsoft library using React, resulting in an 80% reduction in component load times.",
-      "Spearheaded the development of custom UI features for the Microsoft Dynamics 365 platform, using React and TypeScript to deliver significant enhancements.",
-      "Delivered key features for Microsoft Ignite's high-traffic video player (viewed by 400,000+ attendees), implementing multi-language support and robust CDN integration.",
-    ],
-    tags: ["TypeScript", "React", "Microsoft Dynamics 365", "Azure", ".NET Core"],
-  },
-  {
-    icon: "smartphone",
-    title: "iOS Developer",
-    company: "AI Droid",
-    date: "Feb 2023 - June 2023",
-    details: [
-      "Engineered and launched multiple iOS applications leveraging both UIKit and SwiftUI, driving app success to over 10,000 impressions.",
-      "Maintained an exceptional 4.8-star average rating on the App Store, showcasing strong user satisfaction and market traction.",
-      "Pioneered integration of Generative AI and deep learning models using Apple's Core ML framework to deliver innovative features.",
-    ],
-    tags: ["Swift", "SwiftUI", "UIKit", "Core ML", "MongoDB"],
-  },
+  icon: "cpu",
+  title: "Intern – IoT with Machine Learning",
+  company: "Pantech E-Learning",
+  date: "May 2023 – Jul 2023",
+  details: [
+    "Completed hands-on internship focused on integrating Internet of Things (IoT) devices with Machine Learning models for predictive analytics and automation.",
+    "Learned and applied key regression algorithms to analyze sensor data and predict environmental parameters such as temperature and humidity.",
+    "Implemented Python-based ML models to process IoT datasets and visualize real-time outputs using cloud dashboards.",
+    "Gained experience in end-to-end IoT data pipelines — from sensor data collection to ML-based insights generation.",
+  ],
+  tags: ["IoT", "Machine Learning", "Regression Models", "Python", "Data Analysis"],
+}
 ];
 
 /* ------------- Minimal inline SVG icons (no extra deps) ------------- */
@@ -52,12 +42,25 @@ const icons = {
       <path d="M12 17v-4" />
     </svg>
   ),
-  fileText: (props) => (
+  layers: (props) => ( // Added 'layers' icon from the data
     <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-      <path d="M14 2v4a2 2 0 0 1-2 2h-4" />
-      <path d="M10 12h6" />
-      <path d="M10 16h6" />
+      <path d="m12 1.5 8 4.5-8 4.5-8-4.5 8-4.5" />
+      <path d="m4 12 8 4.5 8-4.5" />
+      <path d="m4 19.5 8 4.5 8-4.5" />
+    </svg>
+  ),
+  cpu: (props) => ( // Added 'cpu' icon from the data
+    <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="5" y="5" width="14" height="14" rx="2" ry="2" />
+      <path d="M9 9h6v6H9z" />
+      <path d="M15 2v3" />
+      <path d="M15 19v3" />
+      <path d="M2 9h3" />
+      <path d="M19 9h3" />
+      <path d="M2 15h3" />
+      <path d="M19 15h3" />
+      <path d="M9 2v3" />
+      <path d="M9 19v3" />
     </svg>
   ),
   "file-text": (props) => icons.fileText(props),
@@ -71,7 +74,8 @@ const icons = {
 
 /* -------------------- ITEM -------------------- */
 function TimelineItem({ data, isLast, index }) {
-  const Icon = icons[data.icon] || icons.briefcase;
+  // Ensured icons for 'layers' and 'cpu' are correctly mapped.
+  const Icon = icons[data.icon] || icons.briefcase; 
   const ref = React.useRef(null);
 
   // progress 0→1 as this item enters the viewport
@@ -112,7 +116,7 @@ function TimelineItem({ data, isLast, index }) {
         transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.06 }}
         className="flex-grow pl-14 md:pl-16 pb-10"
       >
-        <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5">
+        <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-indigo-500 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5">
           <h3 className="text-xl font-semibold text-gray-800 mb-1">{data.title}</h3>
           <p className="text-md text-gray-600 font-medium">{data.company}</p>
           <p className="text-sm mb-4">{data.date}</p>
@@ -127,7 +131,7 @@ function TimelineItem({ data, isLast, index }) {
 
           <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-100">
             {data.tags.map((tag, i) => (
-              <span key={i} className="px-3 py-1 text-xs font-medium bg-indigo-100 rounded-full">
+              <span key={i} className="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-700 rounded-full">
                 {tag}
               </span>
             ))}
@@ -143,9 +147,11 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="min-h-screen bg-gray-50 font-sans"  /* ✅ same light background section */
+      // 👇 FIX APPLIED: Reduced bottom padding significantly from pb-16/lg:pb-20 to pb-12/lg:pb-16
+      className="bg-gray-50 font-sans pt-16 pb-12 lg:pt-16 lg:pb-12" 
     >
-      <div className="max-w-7xl mx-auto py-12">
+      {/* Removed py-12 from this div as padding is now on the section */}
+      <div className="max-w-7xl mx-auto">
         {/* Header (kept your look) */}
         <motion.header
           initial={{ opacity: 0, y: 12 }}
@@ -154,7 +160,7 @@ export default function Experience() {
           transition={{ duration: 0.5 }}
           className="mb-12 text-center lg:text-left w-full lg:w-4/5 xl:w-2/3 mx-auto px-4"
         >
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-2">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">
             My Professional Experience
           </h1>
           <p className="text-lg text-gray-600">

@@ -1,42 +1,42 @@
 // src/App.jsx
-import React from "react";
-import Navbar from "./Navbar";
-import HeroSection from "./HeroSection";
-import Experience from "./Experience";
-import Projects from "./Projects";
-import Footer from "./Footer";
-import ContactSection from "./ContactSection";
-import AchievementsSection from "./AchievementSection";
+import HeroSection from "./HeroSection.jsx";
+import AchievementsSection from "./AchievementSection.jsx";
+import ContactSection from "./ContactSection.jsx";
+import Project from "./Projects.jsx";
+import Experience from "./Experience.jsx";
+import Footer from "./Footer.jsx";
+import Navbar from "./Navbar.jsx";
 
-const App = () => {
+export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
-      <Navbar />
+    <>
+    <Navbar/>
+    
+  <HeroSection />
 
-      <main className="container mx-auto px-4 py-8 mt-4 space-y-20">
-        <section id="home">
-          <HeroSection />
-        </section>
 
-       <section id="experience" className="min-h-screen">
-  <Experience />
-</section>
-<section id="achievements">
-<AchievementsSection/>
-</section>
+      {/* Experience */}
 
-        <section id="projects">
-          <Projects />
-        </section>
+      <section id="experience">
+     <Experience />
+   </section>
 
-        <section id="contact">
-          <ContactSection/>
-        </section>
-      
-      </main>
-      <Footer/>
-    </div>
+      {/* Achievements */}
+     <section id="achievements">
+     <AchievementsSection/>
+     </section>
+
+      {/* Projects */}
+      <section id="projects">
+         <Project />
+      </section>
+     
+
+      {/* Contact */}
+      <section id="contact" className="scroll-mt-24">
+        <ContactSection />
+      </section>
+        <Footer />
+    </>
   );
-};
-
-export default App;
+}

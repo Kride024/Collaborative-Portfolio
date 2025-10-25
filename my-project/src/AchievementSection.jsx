@@ -35,14 +35,14 @@ const Row = ({ icon: Icon, title, subtitle }) => (
 );
 
 export default function AchievementsSection() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
-  return (
-    <section
-      id="achievements"
-      ref={ref}
-      className="min-h-screen bg-slate-950 text-white py-20 px-6"
-    >
+  return (
+    <section
+      id="achievements"
+      ref={ref}
+      className="bg-slate-950 text-white py-20 px-6" // 👈 Fixed
+    >
       {/* Section title */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}

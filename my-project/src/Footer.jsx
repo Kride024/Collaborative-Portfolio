@@ -12,7 +12,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative mt-32 bg-gradient-to-t from-slate-950 via-slate-900 to-slate-900 text-slate-300">
+    <footer className="relative mt-8 md:mt-12  bg-gradient-to-t from-slate-950 via-slate-900 to-slate-900 text-slate-300">
       {/* Glow / divider */}
       <div className="h-px w-full bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent" />
 
