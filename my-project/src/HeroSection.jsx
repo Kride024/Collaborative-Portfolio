@@ -37,7 +37,7 @@ export default function HeroSection({
 
           <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-5xl">
             <span className="inline-flex">
-              Kriti <span className="text-indigo-300 ml-1">Yadav</span>
+              Kriti  <span className="text-indigo-300 ml-1">Yadav</span>
 </span>
 
             {/* Highlighted name color */}
