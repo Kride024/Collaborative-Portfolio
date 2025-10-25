@@ -27,27 +27,27 @@ const CodeIcon = (props) => (
 const projectsData = [
   // Row 1
   {
-    title: 'Elicit Engineers and  Interiors Website',
+    title: 'Elicit Engineers and  Interiors Website',
     description: 'Spearheaded the full-cycle development and independent launch of the core company website.',
-    image: 'code-docs', 
+    image: 'Screenshot 2025-10-26 002411.png', 
     tags: ['React.js', 'JavaScript', 'Google App Script', 'Local Storage', 'SEO', 'GitHub'],
     githubLink: 'https://www.elicit.co.in/',
   },
   {
     title: 'Vritra: Real-Time Health & Consultation Platform',
-    description: 'Implemented WebRTC for video consultations and integrated  AI service for user health tracking.',
-    image: 'eink', 
+    description: 'Implemented WebRTC for video consultations and integrated  AI service for user health tracking.',
+    image: 'Screenshot 2025-10-26 002455.png', 
     tags: ['Node.js', 'MongoDB', 'Python (AI)', 'WebRTC', 'Docker', 'RESTful APIs', 'CI/CD'],
     githubLink: 'https://jayawd456.github.io/Solution-Challenge-2025-Vritra-/',
   },
   {
     title: 'Retail-Supply-Chains: Full-Stack Logistics Platform',
     description: 'End-to-End logistics platform (Customer-Shipper bridge) best route calculation, delivery management.',
-    image: 'picai', 
+    image: 'Screenshot 2025-10-26 002522.png', 
     tags: ['React', 'SQL', 'Firebase', 'Google Maps API', 'RESTful APIs', 'Material Design'],
     githubLink: 'https://jayawd456.github.io/Trasforming-Retail-Supply-Chains/',
   },
-//   // Row 2
+//   // Row 2 (Uncommented placeholders)
 //   {
 //     title: 'Exchange Platform',
 //     description: 'A full-stack exchange application built with a modern monorepo architecture.',
@@ -71,58 +71,89 @@ const projectsData = [
 //   },
 ];
 
+// 🌟 NEW: List of placeholder keys to correctly separate real images from icons
+const PLACEHOLDER_KEYS = ['code-docs', 'eink', 'picai', 'transfer', 'chess', 'anon-mail'];
+
 // --- Project Card Component ---
 
 const ProjectCard = ({ project, index }) => { 
-    // This function returns a className based on the image placeholder, mimicking the screenshot styles
-    const getCardImageClasses = (imageKey) => {
-        switch (imageKey) {
-            case 'code-docs':
-                return 'bg-gray-900 bg-center bg-cover flex items-end p-4 h-48 rounded-t-xl overflow-hidden';
-            case 'eink':
-                return 'bg-white flex items-center justify-center h-48 rounded-t-xl overflow-hidden';
-            case 'picai':
-                return 'bg-gray-800 bg-center bg-cover flex items-end p-4 h-48 rounded-t-xl overflow-hidden';
-            case 'transfer':
+    // Determine if the 'image' property is an actual file name or a hardcoded placeholder key
+    const isPlaceholder = PLACEHOLDER_KEYS.includes(project.image);
+    const baseImageClasses = 'h-48 rounded-t-xl overflow-hidden';
 
-                return 'bg-gray-100 flex items-center justify-center h-48 rounded-t-xl overflow-hidden';
-            case 'chess':
-                return 'bg-amber-100 flex items-center justify-center h-48 rounded-t-xl overflow-hidden';
-            case 'anon-mail':
-            default:
-                return 'bg-gray-100 flex items-center justify-center h-48 rounded-t-xl overflow-hidden';
-        }
-    };
+    // Helper to get image URL for public assets
+    const getPublicImageUrl = (imageName) => {
+        // Accesses the image from the public folder root
+        return `/${imageName}`; 
+    }
 
-    // This function provides the actual visual content for the card header
-    const getCardImageContent = (imageKey) => {
-        switch (imageKey) {
-            case 'code-docs':
-                return (
-                    <div className="w-full h-full bg-cover bg-top" style={{backgroundImage: `url('placeholder-code-docs.png')`}}>
-                        <div className="flex justify-end p-2">
-                             <span className="text-white text-xs bg-red-600 px-2 py-0.5 rounded mr-1">CD</span>
-                        </div>
-                    </div>
-                );
-            case 'eink':
-                return <span className="text-5xl font-extrabold text-gray-900">EiNK</span>;
-            case 'picai':
-                return <span className="text-3xl font-bold text-white tracking-widest">Furniture</span>;
-            case 'transfer':
-                return <span className="text-2xl font-bold text-gray-700">Transfer</span>;
-            case 'chess':
-                // A simple placeholder for the chess board image
-                return <div className="w-full h-full bg-center bg-cover" style={{backgroundImage: `url('placeholder-chess-board.png')`, maxWidth: '100%', maxHeight: '100%'}}></div>;
-            case 'anon-mail':
-            default:
-                return <CodeIcon />;
-        }
-    };
+    // This function returns a className based on the image placeholder
+    const getCardImageClasses = (imageKey) => {
+        if (!isPlaceholder) {
+            // For actual screenshots, use a standard layout without specific background
+            return `${baseImageClasses} flex items-center justify-center`;
+        }
+        
+        // Existing placeholder logic
+        switch (imageKey) {
+            case 'code-docs':
+                return `${baseImageClasses} bg-gray-900 bg-center bg-cover flex items-end p-4`;
+            case 'eink':
+                return `${baseImageClasses} bg-white flex items-center justify-center`;
+            case 'picai':
+                return `${baseImageClasses} bg-gray-800 bg-center bg-cover flex items-end p-4`;
+            case 'transfer':
+                return `${baseImageClasses} bg-gray-100 flex items-center justify-center`;
+            case 'chess':
+                return `${baseImageClasses} bg-amber-100 flex items-center justify-center`;
+            case 'anon-mail':
+            default:
+                return `${baseImageClasses} bg-gray-100 flex items-center justify-center`;
+        }
+    };
+
+    // This function provides the actual visual content for the card header
+    const getCardImageContent = (imageKey) => {
+        // 🌟 FIX: Display the actual image from the public folder
+        if (!isPlaceholder) {
+             return (
+                 <img
+                    src={getPublicImageUrl(imageKey)}
+                    alt={`${project.title} Screenshot`}
+                    // Use object-cover to ensure the image fills the container while maintaining aspect ratio
+                    className="w-full h-full object-cover" 
+                 />
+             );
+        }
+
+        // Existing placeholder content logic (will only run if isPlaceholder is true)
+        switch (imageKey) {
+            case 'code-docs':
+                return (
+                    <div className="w-full h-full bg-cover bg-top" style={{backgroundImage: `url('placeholder-code-docs.png')`}}>
+                        <div className="flex justify-end p-2">
+                             <span className="text-white text-xs bg-red-600 px-2 py-0.5 rounded mr-1">CD</span>
+                        </div>
+                    </div>
+                );
+            case 'eink':
+                return <span className="text-5xl font-extrabold text-gray-900">EiNK</span>;
+            case 'picai':
+                return <span className="text-3xl font-bold text-white tracking-widest">Furniture</span>;
+            case 'transfer':
+                return <span className="text-2xl font-bold text-gray-700">Transfer</span>;
+            case 'chess':
+                // A simple placeholder for the chess board image
+                return <div className="w-full h-full bg-center bg-cover" style={{backgroundImage: `url('placeholder-chess-board.png')`, maxWidth: '100%', maxHeight: '100%'}}></div>;
+            case 'anon-mail':
+            default:
+                return <CodeIcon />;
+        }
+    };
 
     return (
         <motion.div
-            className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform" 
+            className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" 
             
             // ✅ STARTING POSITION: Cards are hidden and small
             initial={{ opacity: 0, scale: 0.8 }} 
@@ -178,7 +209,7 @@ const ProjectCard = ({ project, index }) => {
                     className="flex items-center justify-center w-full py-2 text-sm font-semibold text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-150"
                 >
                     <GitHubIcon />
-                    View on GitHub
+                    View Project Link
                 </a>
             </div>
         </motion.div>
@@ -190,14 +221,14 @@ const ProjectCard = ({ project, index }) => {
 const Projects = () => {
     return (
         <div 
-            // Removed min-h-screen to prevent unnecessary vertical space
-            className="bg-gray-50 font-sans" 
-            style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #e5e7eb 1px, transparent 0)' , backgroundSize: '20px 20px'}}
-        >
+            // Removed min-h-screen to prevent unnecessary vertical space
+            className="bg-gray-50 font-sans" 
+            style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #e5e7eb 1px, transparent 0)' , backgroundSize: '20px 20px'}}
+        >
             <div 
-                // Uses pb-4 by default, but switches to pb-16 (4rem) on 2XL screens (1536px+)
-                className="max-w-7xl mx-auto pt-16 pb-8 2xl:pb-16 px-4 sm:px-6 lg:px-8" 
-            >
+                // Uses pb-4 by default, but switches to pb-16 (4rem) on 2XL screens (1536px+)
+                className="max-w-7xl mx-auto pt-16 pb-8 2xl:pb-16 px-4 sm:px-6 lg:px-8" 
+            >
                 
                 {/* Header Section - Keeping initial animation here, but you might also want to change this to whileInView if it's below the fold */}
                 <motion.header 
