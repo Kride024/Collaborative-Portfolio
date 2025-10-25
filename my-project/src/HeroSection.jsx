@@ -36,9 +36,9 @@ export default function HeroSection({
           </div>
 
           <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-5xl">
-            <span className="block">Kriti</span>
+            <span className="block">Kriti  <span className="block text-indigo-300">Yadav</span></span>
             {/* Highlighted name color */}
-            <span className="block text-indigo-300">Yadav</span> 
+            
           </h1>
 
           {/* Text color is light gray */}
