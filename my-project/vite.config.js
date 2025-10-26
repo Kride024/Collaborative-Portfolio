@@ -7,5 +7,9 @@ export default defineConfig({
   plugins: [react() ,
     tailwindcss(),
   ],
-  base: '/',
+  base: '/Collaborative-Portfolio/',
+    // Add this to help with asset loading
+  build: {
+    assetsDir: 'assets',
+  }
 })
