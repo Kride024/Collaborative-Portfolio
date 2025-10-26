@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 
 export default function HeroSection({
   avatarSrc = `${import.meta.env.BASE_URL}Img_kriti.jpg`,
-  resumeHref = "https://drive.google.com/file/d/1ZzkrGm0hOHFQpHWDG1O_-MromqKPIMfc/view?usp=sharing",
+  resumeHref = "https://drive.google.com/file/d/1H2xK9SsVSXb4c3szZnQzmqVOOlELoOHh/view?usp=sharing",
    onSeeWork = () => {
     const experienceSection = document.getElementById('experience');
     experienceSection?.scrollIntoView({ behavior: 'smooth' });
