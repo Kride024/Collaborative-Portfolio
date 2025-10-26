@@ -25,7 +25,7 @@ const CodeIcon = (props) => (
 // --- Project Data ---
 
 const projectsData = [
-  // Row 1
+  // Row 
   {
     title: 'Elicit Engineers and  Interiors Website',
     description: 'Spearheaded the full-cycle development and independent launch of the core company website.',
