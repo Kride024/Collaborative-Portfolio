@@ -36,14 +36,14 @@ const projectsData = [
   {
     title: 'Vritra: Real-Time Health & Consultation Platform',
     description: 'Implemented WebRTC for video consultations and integrated  AI service for user health tracking.',
-    image: `${import.meta.env.BASE_URL}Screenshot 2025-10-26 002455.png`, 
+    image: `/Collaborative-Portfolio/Screenshot 2025-10-26 002455.png`, 
     tags: ['Node.js', 'MongoDB', 'Python (AI)', 'WebRTC', 'Docker', 'RESTful APIs', 'CI/CD'],
     githubLink: 'https://jayawd456.github.io/Solution-Challenge-2025-Vritra-/',
   },
   {
     title: 'Retail-Supply-Chains: Full-Stack Logistics Platform',
     description: 'End-to-End logistics platform (Customer-Shipper bridge) best route calculation, delivery management.',
-    image: `${import.meta.env.BASE_URL}Screenshot 2025-10-26 002522.png`, 
+    image: `/Collaborative-Portfolio/Screenshot 2025-10-26 002522.png`, 
     tags: ['React', 'SQL', 'Firebase', 'Google Maps API', 'RESTful APIs', 'Material Design'],
     githubLink: 'https://jayawd456.github.io/Trasforming-Retail-Supply-Chains/',
   },
