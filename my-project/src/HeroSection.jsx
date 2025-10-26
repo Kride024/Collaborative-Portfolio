@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 
 export default function HeroSection({
-  avatarSrc = "/Img_kriti.jpg",
+  avatarSrc = `${import.meta.env.BASE_URL}Img_kriti.jpg`,
   resumeHref = "https://drive.google.com/file/d/1ZzkrGm0hOHFQpHWDG1O_-MromqKPIMfc/view?usp=sharing",
    onSeeWork = () => {
     const experienceSection = document.getElementById('experience');
