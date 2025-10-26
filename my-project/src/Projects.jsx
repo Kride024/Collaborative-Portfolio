@@ -29,7 +29,7 @@ const projectsData = [
   {
     title: 'Elicit Engineers and  Interiors Website',
     description: 'Spearheaded the full-cycle development and independent launch of the core company website.',
-    image: `${import.meta.env.BASE_URL}Screenshot 2025-10-26 002411.png`,
+    image: `/Collaborative-Portfolio/Screenshot 2025-10-26 002411.png`,
     tags: ['React.js', 'JavaScript', 'Google App Script', 'Local Storage', 'SEO', 'GitHub'],
     githubLink: 'https://www.elicit.co.in/',
   },
